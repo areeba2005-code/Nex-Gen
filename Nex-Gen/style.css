@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  overflow-x: hidden; 
+}
+
+/* Your top bar styles */
+.top {
+    background-color: #21333E;
+    color: #606D75;
+    font-size: 16px;
+    padding: 8px 0;
+    font-family: Montserrat, sans-serif;
+}
+
+/* Header container spacing */
+.header {
+    display: flex;
+    margin: 0px 38px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Navbar link styles */
+.nav-link {
+    color: #C0C3D0;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14.4px;
+    padding: 8px 16px 8px 0px;
+    font-family: Montserrat, sans-serif;
+}
+
+.nav-list {
+    color: #F9F9F9;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+span.first {
+    color: #00A6A6;
+    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    margin: 0px -10px 0px 0px;
+    font-weight: bolder;
+}
+
+span.second {
+    color: #C0C3D0;
+    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    margin: 0px -10px 0px 0px;
+    font-weight: bolder;
+}
+
+a.btn {
+    background: #058283;
+    color: #F9F9F9;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+}
+
+a.btn:hover {
+    background: #9dd6d6;
+    color: white;
+    text-decoration: none;
+}
+
+a.nav-link:hover {
+    color: #058283;
+}
+
+a.nav-list:hover {
+    color: #058283;
+}
+
+.hero {
+    background: url('img-1.webp') no-repeat center center/cover;
+    background-attachment: fixed; /* This makes the image stay fixed */
+    height: 100vh;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust brightness */
+    z-index: 1;
+}
+
+.hero .sub,
+.hero .left {
+    position: relative;
+    z-index: 2; /* Keep text and nav above the overlay */
+}
+
+
+
+
+ div.text-left {
+    margin: 50px;
+    padding-left: 50px;
+ }
+
+ span.pre-title {
+    color: #00A6A6;
+    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    font-weight: bolder;
+    filter: brightness(150%);
+ }
+
+.heading-wrapper {
+  margin-top: 30px;
+  position: relative;
+  z-index: 2; /* ensure this whole block is above background overlay */
+}
+
+.main-heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 84px;
+  line-height: 1.1;
+  color: white;
+  margin: 0;
+  position: relative;
+}
+
+.get-more {
+  display: block;
+  margin-bottom: 30px;
+  color: white;
+  font-weight: 800;
+  position: relative;
+  z-index: 2; 
+  opacity: 0;
+  animation: get-more 0.8s ease-in forwards;
+  
+}
+
+@keyframes get-more {
+  to {
+    opacity: 1;
+  }
+}
+
+.rectangle {
+  width: 550px;
+  height: 60px;
+  background-color: #036a6b; 
+  position: relative;
+  overflow: visible;
+  z-index: 1; 
+  border-radius: 8px;
+}
+
+.productivity {
+  position: absolute;
+  top: -30px;
+  left: 5px;
+  font-size: 84px;
+  font-weight: 800;
+  color: white;
+  z-index: 2; 
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: productivity 0.8s ease-in forwards; 
+}
+
+@keyframes productivity {
+  to {
+    opacity: 1;
+  }
+}
+
+.paragraph {
+    color: white;
+    font-size: 24px;
+    font-family: Montserrat, sans-serif;
+    margin: 24px 0px;
+}
+
+.button-bar {
+  display: flex;
+  gap: 20px; /* clean spacing between both buttons */
+}
+
+
+a.btn-2 {
+  background: transparent;
+  text-decoration: none;      
+  border: 2px solid #00A6A6;    
+  color: #F9F9F9;               
+  padding: 10px 25px;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  transition: all 0.3s ease;
+}
+
+a.btn-2:hover {
+  background-color: #00A6A6;
+  color: white;
+  text-decoration: none;
+}
+
+.section-1 {
+  padding: 100px 0;
+  background-color: #f4faf7; /* light pastel green */
+}
+
+
+.custom-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px 30px;
+  color: #2a3b47;
+  height: 100%;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.custom-card:hover {
+  transform: translateY(-20px); /*raise upward */
+  z-index: 10;                  /*raise upward as campare to other box*/
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
+
+}
+
+
+.icon-wrapper {
+  background-color: #dff2f1;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+
+.icon-wrapper i {
+  font-size: 32px;
+  color: #007c7c;
+}
+
+h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #606d75;
+  font-size: 16px;
+}
+
+
+.pre-title-1 {
+  color: #2a3b47;
+  font-size: 19px;
+  font-family: Montserrat, sans-serif;
+  margin-top: -20px;
+  display: inline-block;
+  
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Light teal background for "The" */
+.highlighted-word {
+  background-color: #dff1f2;
+  color: #058283;
+  font-weight: 900;
+  padding: 8px 16px;
+  font-size: 48px;
+  font-family: Poppins, sans-serif;
+  border-radius: 4px;
+}
+
+/* Headings and general style */
+.company-heading {
+  font-size: 48px;
+  font-family: Poppins, sans-serif;
+  margin: 24px 0px;
+  color: #21333E;
+  font-weight: 900;
+}
+
+.text-teal {
+  color: #00A6A6;
+  font-size: 30px;
+  font-family: Montserrat, sans-serif;
+}
+
+
+a.btn-2-2 {
+  background: transparent;
+  text-decoration: none;      
+  border: 2px solid #00A6A6;    
+                
+  padding: 10px 25px;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.company-heading-1 {
+  color: white;
+  font-size: 48px;
+  font-family: Poppins, sans-serif;
+  margin: 24px 0px 0px;
+  font-weight: 900;
+}
+
+.highlighted-word-1 {
+  color: white;
+}
+
+.nav-list-1 {
+  color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+}
+
+.section-3 {
+  background-color: #111117;
+  padding: 130px 0px;
+}
+
+div.overflow-holder {
+  margin: -25px 0px;
+  padding: 25px 0px;
+}
+
+.container {
+  padding: 0px 10px;
+}
+
+#projects .card {
+  border: none;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+#projects .card:hover {
+  transform: scale(1.02);
+}
+
+#projects .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: 0.3s ease;
+}
+
+#projects .card:hover img {
+  filter: brightness(0.8);
+}
+
+#projects .card-title {
+  font-size: 19px;
+  font-family: Monsterrat, sans-serif;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+#projects .card-text {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+
+
+.section-3 {
+  background-color: #0c0c0c; 
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: white;
+}
+
+.nav-list-1 {
+  color: white;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-list-1:hover,
+.nav-list-1.active {
+  background-color: #065353; 
+  color: white;
+}
+
+.card {
+  background: none;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.6);
+}
+
+.card-body h4 {
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.card-body p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Container spacing */
+#process {
+  padding: 60px 0;
+}
+
+/* Step item box spacing */
+#process .item {
+  margin: 10px;
+  padding: 20px;
+  background-color: #f8f9fa; /* light background */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+/* Hover effect for visual feedback */
+#process .item:hover {
+  transform: translateY(-5px);
+}
+
+/* Step number styling */
+#process .step span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #0c5757;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Title and paragraph spacing */
+#process .item h4 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #21333E;
+}
+
+#process .item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.contact {
+  color: #C0C3D0;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  background: #111117;
+  padding: 130px 0px;
+}
+
+.form-control {
+  background: #FFFFFF0D;
+  padding: 16px;
+  border: none;
+  color: #C0C3D0;
+  border-radius: 6px; /* Optional: slight round edges */
+}
+
+.form-control::placeholder {
+  color: #C0C3D0;
+  opacity: 1;
+}
+
+.one {
+  color: #F9F9F9;
+  font-size: 24px;
+  font-family: Montserrat, sans-serif;
+  margin: 0px 0px 24px;
+
+}
+
+.nav-link-1 {
+  color: #058283; 
+  font-size: 19.2px;
+  font-family: Montserrat, sans-serif;
+  padding: 5px 0px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+.navbar-nav .nav-item {
+  margin-right: 20px; 
+}
+
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+
+footer {
+  background-color: #0a0a0a;
+  color: #C0C3D0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  padding: 24px 0;
+  border-top: 1px solid #2e2e2e;
+}
+
+footer a {
+  color: #036a6b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  footer {
+    text-align: center;
+  }
+
+  footer .text-md-left,
+  footer .text-md-right {
+    text-align: center !important;
+  }
+}
+
+
+
+
+
+
